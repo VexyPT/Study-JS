@@ -2,7 +2,7 @@ class Booking {
   #customerName;
   #checkInDate;
   #checkOutDate;
-  
+
   constructor(customerName, checkInDate, checkOutDate) {
     this.#customerName = customerName;
     this.#checkInDate = new Date(checkInDate);
