@@ -3,24 +3,30 @@ class Book {
   #author
   #year
   #available
+
   constructor(title, author, year, available=true) {
     this.#title = title;
     this.#author = author;
     this.#year = year;
     this.#available = available;
   }
+
   getTitle() {
     return this.#title;
   }
+
   getAuthor() {
     return this.#author;
   }
+
   getYear() {
     return this.#year;
   }
+
   isAvailable() {
     return this.#available;
   }
+
   borrow() {
     if(!this.#available) {
       return console.log("O livro não está disponível.");
@@ -28,6 +34,7 @@ class Book {
     this.#available = false;
     return console.log("Livro emprestado.");
   }
+
   return() {
     if(this.#available) {
       return console.log("O livro já foi devolvido ou nunca foi emprestado");
@@ -39,12 +46,15 @@ class Book {
 
 class Library {
   #books
+
   constructor() {
     this.#books = [];
   }
+
   addBook(book) {
     this.#books.push(book);
   }
+  
   listBooks() {
     if (this.#books.length == 0) {
       return "Biblioteca vazia";
